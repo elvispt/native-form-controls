@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>Native Form Controls</title>
-
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,517 +22,640 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- styles are inline due to the simplicity of the page -->
-    <style>
-        body {
-            font-family: "Helvetica", sans-serif;
-        }
-        table tbody td:first-child {
-            font-family: Consolas, monospace;
-        }
-    </style>
 </head>
 <body>
 
+<header>
     <h1>Native Form Controls</h1>
-    <p>
-        This is how the following form elements look like in your system and browser.<br />
-        No styles where added to the elements.<br />
-        All elements are surrounded by a form to simulate a submit.<br />
-        When the browser does not support the specified control it fallbacks to a &lt;input type=&quot;text&quot;&gt;.<br />
-    </p>
+    <a class="toGH" href="https://github.com/elvispt/native-form-controls" target="_blank">
+        <span>View on Github</span>
+        <img src="GitHub-Mark-32px.png"/>
+    </a>
+</header>
+<p>
+    This is how the following form elements look like in your system and browser.<br/>
+    <small>No styles where added to the elements.</small>
+    <br/>
+    <small>When the browser does not support the specified control it fallbacks to a &lt;input type=&quot;text&quot;&gt;.</small>
+    <br/>
+</p>
+
+<article>
+    <h1>Buttons</h1>
 
     <form>
-
-    <article>
-        <h1>Buttons</h1>
-        <p>Everything that is a button or behaves as a button.</p>
-
         <table>
+            <caption>Everything that is a button or behaves as a button.</caption>
             <thead>
-                <tr>
-                    <th>Markup</th>
-                    <th>Output</th>
-                </tr>
+            <tr>
+                <th>Markup</th>
+                <th>Output</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>&lt;button type=&quot;button&quot;&gt;Button&lt;/button&gt;</td>
-                    <td>
-                        <button type="button">Button</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;button type=&quot;button&quot; disabled&gt;Button&lt;/button&gt;</td>
-                    <td>
-                        <button type="button" disabled>Button</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;</td>
-                    <td>
-                        <button type="reset">Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;button type=&quot;reset&quot; disabled&gt;Reset&lt;/button&gt;</td>
-                    <td>
-                        <button type="reset" disabled>Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</td>
-                    <td>
-                        <button type="submit">Submit</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;button type=&quot;submit&quot; disabled&gt;Submit&lt;/button&gt;</td>
-                    <td>
-                        <button type="submit" disabled>Submit</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;button&quot; value=&quot;Button&quot;&gt;</td>
-                    <td>
-                        <input type="button" value="Button">
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;button&quot; value=&quot;Button&quot; disabled&gt;</td>
-                    <td>
-                        <input type="button" value="Button" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;reset&quot;&gt;</td>
-                    <td>
-                        <input type="reset">
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;reset&quot; disabled&gt;</td>
-                    <td>
-                        <input type="reset" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;submit&quot;&gt;</td>
-                    <td>
-                        <input type="submit">
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;submit&quot; disabled&gt;</td>
-                    <td>
-                        <input type="submit" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;image&quot; src=&quot;android-icon-48x48.png&quot;&gt;</td>
-                    <td>
-                        <input type="image" src="android-icon-48x48.png">
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;input type=&quot;image&quot; src=&quot;android-icon-48x48.png&quot; disabled&gt;</td>
-                    <td>
-                        <input type="image" src="android-icon-48x48.png" disabled>
-                    </td>
-                </tr>
+            <tr>
+                <td>&lt;button type=&quot;button&quot;&gt;Button&lt;/button&gt;</td>
+                <td>
+                    <button type="button">Button</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;button type=&quot;button&quot; disabled&gt;Button&lt;/button&gt;</td>
+                <td>
+                    <button type="button" disabled>Button</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;</td>
+                <td>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;button type=&quot;reset&quot; disabled&gt;Reset&lt;/button&gt;</td>
+                <td>
+                    <button type="reset" disabled>Reset</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</td>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;button type=&quot;submit&quot; disabled&gt;Submit&lt;/button&gt;</td>
+                <td>
+                    <button type="submit" disabled>Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;button&quot; value=&quot;Button&quot;&gt;</td>
+                <td>
+                    <input type="button" value="Button">
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;button&quot; value=&quot;Button&quot; disabled&gt;</td>
+                <td>
+                    <input type="button" value="Button" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;reset&quot;&gt;</td>
+                <td>
+                    <input type="reset">
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;reset&quot; disabled&gt;</td>
+                <td>
+                    <input type="reset" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;submit&quot;&gt;</td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;submit&quot; disabled&gt;</td>
+                <td>
+                    <input type="submit" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;image&quot; src=&quot;android-icon-48x48.png&quot;&gt;</td>
+                <td>
+                    <input type="image" src="android-icon-48x48.png">
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type=&quot;image&quot; src=&quot;android-icon-48x48.png&quot; disabled&gt;</td>
+                <td>
+                    <input type="image" src="android-icon-48x48.png" disabled>
+                </td>
+            </tr>
             </tbody>
         </table>
-    </article>
-
-    <article>
-        <h1>Inputs</h1>
-        <p>Inputs besides the ones used as buttons.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Markup</th>
-                    <th>Output</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div>
-                            &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;val1&quot;&gt;
-                        </div>
-                        <div>
-                            &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;val2&quot;&gt;
-                        </div>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="checkboxGroup" value="val1">
-                        <input type="checkbox" name="checkboxGroup" value="val2">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;1&quot; disabled&gt;
-                        </div>
-                        <div>
-                            &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;2&quot; disabled&gt;
-                        </div>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="checkboxGroup" value="1" disabled>
-                        <input type="checkbox" name="checkboxGroup" value="2" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;color&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="color">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;color&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="color" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;date&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="date">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;date&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="date" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;datetime-local&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="datetime-local">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;datetime-local&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="datetime-local" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;email&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;email&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="email" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;file&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="file">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;file&quot; multiple&gt;
-                    </td>
-                    <td>
-                        <input type="file" multiple>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;file&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="file" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;hidden&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="hidden"> Nothing to see here!
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;month&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="month">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;month&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="month" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="number">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="number" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot; step=&quot;10&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="number" step="10">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot; step=&quot;10&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="number" step="10" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="number" min="-5" max="5" step="0.5">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;number&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="number" min="-5" max="5" step="0.5" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;password&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="password">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;password&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="password" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;1&quot;&gt;
-                        </div>
-                        <div>
-                            &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;2&quot;&gt;
-                        </div>
-                    </td>
-                    <td>
-                        <input type="radio" name="radioGroup" value="1">
-                        <input type="radio" name="radioGroup" value="2">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;1&quot; disabled&gt;
-                        </div>
-                        <div>
-                            &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;2&quot; disabled&gt;
-                        </div>
-                    </td>
-                    <td>
-                        <input type="radio" name="radioGroup" value="1" disabled>
-                        <input type="radio" name="radioGroup" value="2" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;range&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="range">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;range&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="range" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;range&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="range" min="-100" max="1000" step="1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;range&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="range" min="-100" max="1000" step="1" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;search&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="search">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;search&quot; list=&quot;search-suggestions&quot;&gt;<br/>
-                        &lt;datalist id=&quot;search-suggestions&quot;&gt;<br/>
-                        &nbsp;&nbsp;    &lt;option label=&quot;MERC&quot; value=&quot;Mercedes&quot;&gt;&lt;/option&gt;<br/>
-                        &nbsp;&nbsp;    &lt;option label=&quot;RACE&quot; value=&quot;Ferrari&quot;&gt;&lt;/option&gt;<br/>
-                        &nbsp;&nbsp;    &lt;option label=&quot;FIAT&quot; value=&quot;Fiat&quot;&gt;&lt;/option&gt;<br/>
-                        &nbsp;&nbsp;    &lt;option label=&quot;MTS&quot; value=&quot;Mitsubishi&quot;&gt;&lt;/option&gt;<br/>
-                        &lt;/datalist&gt;
-                    </td>
-                    <td>
-                        <input type="search" list="search-suggestions">
-                        <datalist id="search-suggestions">
-                            <option label="MERC" value="Mercedes"></option>
-                            <option label="RACE" value="Ferrari"></option>
-                            <option label="FIAT" value="Fiat"></option>
-                            <option label="MTS" value="Mitsubishi"></option>
-                        </datalist>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;search&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="search" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;tel&quot; pattern=&quot;[0-9]{10}&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="tel" pattern="[0-9]{10}">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;text&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;text&quot; placeholder=&quot;Placeholder text&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Placeholder text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;time&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="time">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;time&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="time" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;url&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="url">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;url&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="url" disabled>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;week&quot;&gt;
-                    </td>
-                    <td>
-                        <input type="week">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        &lt;input type=&quot;week&quot; disabled&gt;
-                    </td>
-                    <td>
-                        <input type="week" disabled>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </article>
     </form>
+</article>
+
+<article>
+    <h1>Inputs</h1>
+
+    <form>
+        <table>
+            <caption>Inputs besides the ones used as buttons.</caption>
+            <thead>
+            <tr>
+                <th>Markup</th>
+                <th>Output</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div>
+                        &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;val1&quot;&gt;
+                    </div>
+                    <div>
+                        &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;val2&quot;&gt;
+                    </div>
+                </td>
+                <td>
+                    <input type="checkbox" name="checkboxGroup" value="val1">
+                    <input type="checkbox" name="checkboxGroup" value="val2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;1&quot; disabled&gt;
+                    </div>
+                    <div>
+                        &lt;input type=&quot;checkbox&quot; name=&quot;checkboxGroup&quot; value=&quot;2&quot; disabled&gt;
+                    </div>
+                </td>
+                <td>
+                    <input type="checkbox" name="checkboxGroup" value="1" disabled>
+                    <input type="checkbox" name="checkboxGroup" value="2" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;color&quot;&gt;
+                </td>
+                <td>
+                    <input type="color">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;color&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="color" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;date&quot;&gt;
+                </td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;date&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="date" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;datetime-local&quot;&gt;
+                </td>
+                <td>
+                    <input type="datetime-local">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;datetime-local&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="datetime-local" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;email&quot;&gt;
+                </td>
+                <td>
+                    <input type="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;email&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="email" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;file&quot;&gt;
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;file&quot; multiple&gt;
+                </td>
+                <td>
+                    <input type="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;file&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="file" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;hidden&quot;&gt;
+                </td>
+                <td>
+                    <input type="hidden"> Nothing to see here!
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;month&quot;&gt;
+                </td>
+                <td>
+                    <input type="month">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;month&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="month" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot;&gt;
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="number" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot; step=&quot;10&quot;&gt;
+                </td>
+                <td>
+                    <input type="number" step="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot; step=&quot;10&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="number" step="10" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot;&gt;
+                </td>
+                <td>
+                    <input type="number" min="-5" max="5" step="0.5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;number&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="number" min="-5" max="5" step="0.5" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;password&quot;&gt;
+                </td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;password&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="password" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;1&quot;&gt;
+                    </div>
+                    <div>
+                        &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;2&quot;&gt;
+                    </div>
+                </td>
+                <td>
+                    <input type="radio" name="radioGroup" value="1">
+                    <input type="radio" name="radioGroup" value="2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;1&quot; disabled&gt;
+                    </div>
+                    <div>
+                        &lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; value=&quot;2&quot; disabled&gt;
+                    </div>
+                </td>
+                <td>
+                    <input type="radio" name="radioGroup" value="1" disabled>
+                    <input type="radio" name="radioGroup" value="2" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;range&quot;&gt;
+                </td>
+                <td>
+                    <input type="range">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;range&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="range" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;range&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot;&gt;
+                </td>
+                <td>
+                    <input type="range" min="-100" max="1000" step="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;range&quot; min=&quot;-5&quot; max=&quot;5&quot; step=&quot;0.5&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="range" min="-100" max="1000" step="1" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;search&quot;&gt;
+                </td>
+                <td>
+                    <input type="search">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;search&quot; list=&quot;search-suggestions&quot;&gt;<br/>
+                    &lt;datalist id=&quot;search-suggestions&quot;&gt;<br/>
+                    &nbsp;&nbsp; &lt;option label=&quot;MERC&quot; value=&quot;Mercedes&quot;&gt;&lt;/option&gt;<br/>
+                    &nbsp;&nbsp; &lt;option label=&quot;RACE&quot; value=&quot;Ferrari&quot;&gt;&lt;/option&gt;<br/>
+                    &nbsp;&nbsp; &lt;option label=&quot;FIAT&quot; value=&quot;Fiat&quot;&gt;&lt;/option&gt;<br/>
+                    &nbsp;&nbsp; &lt;option label=&quot;MTS&quot; value=&quot;Mitsubishi&quot;&gt;&lt;/option&gt;<br/>
+                    &lt;/datalist&gt;
+                </td>
+                <td>
+                    <div>Paired with a datalist element.</div>
+                    <input type="search" list="search-suggestions">
+                    <datalist id="search-suggestions">
+                        <option label="MERC" value="Mercedes"></option>
+                        <option label="RACE" value="Ferrari"></option>
+                        <option label="FIAT" value="Fiat"></option>
+                        <option label="MTS" value="Mitsubishi"></option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;search&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="search" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;tel&quot; pattern=&quot;[0-9]{10}&quot;&gt;
+                </td>
+                <td>
+                    <input type="tel" pattern="[0-9]{10}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;text&quot;&gt;
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;text&quot; placeholder=&quot;Placeholder text&quot;&gt;
+                </td>
+                <td>
+                    <input type="text" placeholder="Placeholder text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;time&quot;&gt;
+                </td>
+                <td>
+                    <input type="time">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;time&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="time" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;url&quot;&gt;
+                </td>
+                <td>
+                    <input type="url">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;url&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="url" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;week&quot;&gt;
+                </td>
+                <td>
+                    <input type="week">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;input type=&quot;week&quot; disabled&gt;
+                </td>
+                <td>
+                    <input type="week" disabled>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</article>
+
+<article>
+    <h1>Misc</h1>
+
+    <form>
+        <table>
+            <caption>Everything else</caption>
+            <thead>
+            <tr>
+                <th>Markup</th>
+                <th>Output</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>&lt;progress&gt;&lt;/progress&gt;</td>
+                <td>
+                    <progress></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;progress max=&quot;100&quot; value=&quot;45&quot;&gt;&lt;/progress&gt;</td>
+                <td>
+                    <progress max="100" value="45"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;meter min=&quot;0&quot; max=&quot;500&quot; value=&quot;350&quot;&gt;350 degrees&lt;/meter&gt;</td>
+                <td>
+                    <meter min="0" max="500" value="350">350 degrees</meter>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;fieldset&gt;<br/>
+                    &nbsp;&nbsp;  &lt;legend&gt;FIELDSET LEGEND&lt;/legend&gt;<br/>
+                    &nbsp;&nbsp;  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;<br/>
+                    &nbsp;&nbsp;  &lt;input type=&quot;text&quot;&gt;<br/>
+                    &lt;/fieldset&gt;
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>FIELDSET LEGEND</legend>
+                        <input type="text">
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;fieldset disabled&gt;<br/>
+                    &nbsp;&nbsp;  &lt;legend&gt;FIELDSET LEGEND&lt;/legend&gt;<br/>
+                    &nbsp;&nbsp;  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;<br/>
+                    &nbsp;&nbsp;  &lt;input type=&quot;text&quot;&gt;<br/>
+                    &lt;/fieldset&gt;
+                </td>
+                <td>
+                    <fieldset disabled>
+                        <legend>FIELDSET LEGEND</legend>
+                        <input type="text">
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;select&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &lt;/select&gt;
+                </td>
+                <td>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 2</option>
+                        <option value="1">Option 3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;select&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 1&quot;&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 2&quot;&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 3&quot; disabled&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &lt;/select&gt;
+                </td>
+                <td>
+                    <select>
+                        <optgroup label="Group 1">
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                        <optgroup label="Group 2">
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                        <optgroup label="Group 3" disabled>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</article>
 
 </body>
 </html>

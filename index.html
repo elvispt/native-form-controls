@@ -438,6 +438,7 @@
                     &lt;/datalist&gt;
                 </td>
                 <td>
+                    <div>Paired with a datalist element.</div>
                     <input type="search" list="search-suggestions">
                     <datalist id="search-suggestions">
                         <option label="MERC" value="Mercedes"></option>
@@ -555,6 +556,100 @@
                 <td>&lt;progress max=&quot;100&quot; value=&quot;45&quot;&gt;&lt;/progress&gt;</td>
                 <td>
                     <progress max="100" value="45"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;meter min=&quot;0&quot; max=&quot;500&quot; value=&quot;350&quot;&gt;350 degrees&lt;/meter&gt;</td>
+                <td>
+                    <meter min="0" max="500" value="350">350 degrees</meter>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;fieldset&gt;<br/>
+                    &nbsp;&nbsp;  &lt;legend&gt;FIELDSET LEGEND&lt;/legend&gt;<br/>
+                    &nbsp;&nbsp;  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;<br/>
+                    &nbsp;&nbsp;  &lt;input type=&quot;text&quot;&gt;<br/>
+                    &lt;/fieldset&gt;
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>FIELDSET LEGEND</legend>
+                        <input type="text">
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;fieldset disabled&gt;<br/>
+                    &nbsp;&nbsp;  &lt;legend&gt;FIELDSET LEGEND&lt;/legend&gt;<br/>
+                    &nbsp;&nbsp;  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;<br/>
+                    &nbsp;&nbsp;  &lt;input type=&quot;text&quot;&gt;<br/>
+                    &lt;/fieldset&gt;
+                </td>
+                <td>
+                    <fieldset disabled>
+                        <legend>FIELDSET LEGEND</legend>
+                        <input type="text">
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;select&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &lt;/select&gt;
+                </td>
+                <td>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="1">Option 2</option>
+                        <option value="1">Option 3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &lt;select&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 1&quot;&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 2&quot;&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &nbsp;&nbsp;  &lt;optgroup label=&quot;Group 3&quot; disabled&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 2&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  &lt;option value=&quot;1&quot;&gt;Option 3&lt;/option&gt;<br/>
+                    &nbsp;&nbsp;  &lt;/optgroup&gt;<br/>
+                    &lt;/select&gt;
+                </td>
+                <td>
+                    <select>
+                        <optgroup label="Group 1">
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                        <optgroup label="Group 2">
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                        <optgroup label="Group 3" disabled>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="1">Option 3</option>
+                        </optgroup>
+                    </select>
                 </td>
             </tr>
             </tbody>

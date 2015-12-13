@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>Native Form Controls</title>
-
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -22,25 +22,20 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- styles are inline due to the simplicity of the page -->
-    <style>
-        body {
-            font-family: "Helvetica", sans-serif;
-        }
-        table tbody td:first-child {
-            font-family: Consolas, monospace;
-        }
-    </style>
 </head>
 <body>
 
-    <h1>Native Form Controls</h1>
+    <header>
+        <h1>Native Form Controls</h1>
+        <a class="toGH" href="https://github.com/elvispt/native-form-controls" target="_blank">
+            <span>View on Github</span>
+            <img src="GitHub-Mark-32px.png" />
+        </a>
+    </header>
     <p>
         This is how the following form elements look like in your system and browser.<br />
-        No styles where added to the elements.<br />
-        All elements are surrounded by a form to simulate a submit.<br />
-        When the browser does not support the specified control it fallbacks to a &lt;input type=&quot;text&quot;&gt;.<br />
+        <small>No styles where added to the elements.</small><br />
+        <small>When the browser does not support the specified control it fallbacks to a &lt;input type=&quot;text&quot;&gt;.</small><br />
     </p>
 
     <form>
@@ -533,6 +528,5 @@
         </table>
     </article>
     </form>
-
 </body>
 </html>
